@@ -1,0 +1,19 @@
+; ============================================================
+; MAIN.BEAN — Entry point
+; - This file does nothing but stitch the others together.
+; ============================================================
+
+; ------------------------------------------------------------
+; ACCOUNTS.BEAN — Chart of accounts
+; ------------------------------------------------------------
+include "accounts.bean"     ; Chart of accounts
+
+; ------------------------------------------------------------
+; PRICES.BEAN — Foreign currency / investment prices
+; ------------------------------------------------------------
+include "prices.bean"       ; To track foreign currency or investments
+
+; ------------------------------------------------------------
+; [YEAR].BEAN — Transactions for a given year
+; ------------------------------------------------------------
+include "2026.bean"         ; 2026

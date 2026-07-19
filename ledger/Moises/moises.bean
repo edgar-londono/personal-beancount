@@ -1,0 +1,111 @@
+; Moises Pineda Hernandez shared this to me in 2026-07-17 at 15:44
+
+* Options
+
+option "title" "My personal account"
+option "operating_currency" "COP"
+option "inferred_tolerance_default" "*:0.001"
+
+plugin "beancount.plugins.auto_accounts"
+
+* Accounts
+
+2026-06-06 open Assets:Cash                     COP
+2026-06-06 open Assets:Bank:Bancolombia         COP
+2026-06-06 open Assets:Bank:Nu:SavesBox         COP
+2026-06-06 open Assets:Bank:Nu:EmergencyFounds  COP
+2026-06-06 open Assets:Bank:Nu:PaymentsFounds   COP
+
+2026-06-06 open Income:Salary                   COP
+
+2026-06-06 open Expenses:House                  COP
+2026-06-06 open Expenses:AutoAndTransport       COP
+2026-06-06 open Expenses:BillsAndUtilities      COP
+2026-06-06 open Expenses:Education              COP
+2026-06-06 open Expenses:Entertainment          COP
+2026-06-06 open Expenses:Music                  COP
+2026-06-06 open Expenses:FeesAndCharges         COP
+2026-06-06 open Expenses:FoodAndDining          COP
+2026-06-06 open Expenses:GiftsAndDonations      COP
+2026-06-06 open Expenses:HealthAndFitness       COP
+2026-06-06 open Expenses:PersonalCare           COP
+2026-06-06 open Expenses:Shopping               COP
+2026-06-06 open Expenses:Taxes                  COP
+2026-06-06 open Expenses:Travel                 COP
+2026-06-06 open Expenses:Mobile                 COP
+
+2026-06-06 open Liabilities:CreditCard:Nu          COP
+2026-06-06 open Liabilities:UniCredit           COP
+2026-06-06 open Liabilities:Sistecredito        COP
+
+2026-06-06 open Equity:Opening-Balances         COP
+
+* Transactions
+
+2026-06-06 * "Saldos Iniciales" "Configuración de cuentas"
+  Assets:Bank:Bancolombia              425855 COP  ; Tu saldo en Bancolombia
+  Assets:Bank:Nu:SavesBox              0 COP  ; Tu saldo en Nu
+  Assets:Bank:Nu:EmergencyFounds       0 COP  ; Tu saldo en Nu
+  Assets:Bank:Nu:PaymentsFounds              0 COP  ; Tu saldo en Nu
+  Liabilities:CreditCard:Nu               -2400000 COP
+  Liabilities:Sistecredito             -350000  COP
+  Equity:Opening-Balances
+
+2026-06-06 * "Finky" "Credito Universidad Semestre 1"
+  Expenses:Education              2554812 COP
+  Liabilities:UniCredit
+
+2026-06-06 * "Finky" "Pago primer cuota. Semestre 1."
+  Liabilities:UniCredit               425802 COP
+  Assets:Bank:Bancolombia
+
+2026-07-15 * "Payee" "Nómina Quincenal"
+  Assets:Bank:Bancolombia     1691875 COP  ; El dinero que ingresó a tu cuenta principal
+  Income:Salary              -1691875 COP  ; El origen del dinero
+
+2026-07-15 * "Transaction" "Envio de fondos a Nu, Ahorros"
+  Assets:Bank:Bancolombia      -250000  COP
+  Assets:Bank:Nu:SavesBox
+
+2026-07-15 * "Transaction" "Envio de fondos a Nu, Cuenta de Emergencia"
+  Assets:Bank:Bancolombia      -200000  COP
+  Assets:Bank:Nu:EmergencyFounds
+
+2026-07-15 * "Papá" "Cuota quincenal de la casa"
+  Expenses:House                300000 COP
+  Assets:Bank:Bancolombia
+
+2026-07-15 * "Tigo" "Plan mensual del celular"
+  Expenses:Mobile               32529 COP
+  Assets:Bank:Bancolombia
+
+2026-07-16 * "Parking" "Parqueadero publico Laureles"
+  Expenses:AutoAndTransport      3000 COP
+  Assets:Bank:Bancolombia
+
+2026-07-16 * "Transaction" "Mitad de cuota Univerisad"
+  Assets:Bank:Nu:PaymentsFounds      250000 COP
+  Assets:Bank:Bancolombia
+
+2026-07-16 * "Panaderia - Restaurante" "Regalo para Hadith"
+  Assets:Bank:Bancolombia       -15500 COP
+  Expenses:GiftsAndDonations
+
+2026-07-16 * "Mercado Libre" "Piano"
+  Expenses:Music                  1313000 COP
+  Liabilities:CreditCard:Nu           
+
+2026-07-16 * "Hipobuy" "Celular"
+  Expenses:Music                  281473 COP
+  Expenses:FeesAndCharges          1266.63 COP
+  Liabilities:CreditCard:Nu
+
+2026-07-16 * "Hipobuy" "Celular - Empaque y envio"
+  Expenses:Music                   13109.79 COP
+  Expenses:FeesAndCharges          58.99 COP
+  Liabilities:CreditCard:Nu            
+2026-07-17 * "Restaurant" "Almuerzo de hoy con mi hermano"
+  Expenses:FoodAndDining                              45000 COP
+  Assets:Bank:Bancolombia                            -45000 COP
+
+ 

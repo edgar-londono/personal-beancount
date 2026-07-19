@@ -1,0 +1,71 @@
+; ============================================================
+; ACCOUNTS.BEAN — Chart of accounts
+; - This file defines the chart of accounts for the ledger.
+; - Notes: 
+;       - It is included in main.bean and should not be included 
+;       directly in any other file.
+;       - To close an account, add a new line with the date 
+;       and the "close" directive.
+; ============================================================
+
+; ------------------------------------------------------------
+; ASSETS — Things I own
+; ------------------------------------------------------------
+2001-03-20 open Assets:Cash:Wallet              ; Physical cash
+2001-03-20 open Assets:Cash:Emergencies         ; Emergency cash around my house
+
+2001-03-20 open Assets:Bank:Nequi               ; Pocket change for daily expenses
+2001-03-20 open Assets:Bank:Bancolombia         ; Main bank account
+2001-03-20 open Assets:Bank:Nu                  ; Secondary bank account
+
+
+; ------------------------------------------------------------
+; LIABILITIES — Things I owe
+; ------------------------------------------------------------
+2001-03-20 open Liabilities:CreditCard:Visa
+
+
+; ------------------------------------------------------------
+; INCOME — Money coming in
+; ------------------------------------------------------------
+2001-03-20 open Income:Salary
+2001-03-20 open Income:Business
+
+
+; ------------------------------------------------------------
+; EXPENSES — Money going out
+; - This section is divided into:
+;   - Future:
+;       - Things that my future self will thank me for
+;   - Essential:
+;       - Things I need to live
+;   - Nonessential:
+;       - Things I want but don't need
+; ------------------------------------------------------------
+
+; FUTURE EXPENSES
+2001-03-20 open Expenses:Future:EmergencyFund
+
+; ESSENTIAL EXPENSES
+2001-03-20 open Expenses:Health
+  budget_category: "essential"
+2001-03-20 open Expenses:Food:Groceries
+  budget_category: "essential"
+2001-03-20 open Expenses:Transport
+  budget_category: "essential"
+2001-03-20 open Expenses:Housing
+  budget_category: "essential"
+2001-03-20 open Expenses:Utilities
+  budget_category: "essential"
+
+; NONESSENTIAL EXPENSES
+2001-03-20 open Expenses:Food:Restaurants
+  budget_category: "nonessential"
+2001-03-20 open Expenses:Food:Delivery
+  budget_category: "nonessential"
+2001-03-20 open Expenses:Entertainment
+  budget_category: "nonessential"
+2001-03-20 open Expenses:Shopping
+  budget_category: "nonessential"
+2001-03-20 open Expenses:Subscriptions
+  budget_category: "nonessential"
