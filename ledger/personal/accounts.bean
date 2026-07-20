@@ -15,7 +15,7 @@
 
 ; --- Cash ---
 2001-03-20 open Assets:Cash:Wallet
-2001-03-20 open Assets:Cash:Emergencies
+2001-03-20 open Assets:Cash:EmergencyFund
 
 ; --- Bank accounts ---
 ; To receive salary and save money
@@ -36,7 +36,8 @@
 ; ------------------------------------------------------------
 ; LIABILITIES — Things I owe
 ; ------------------------------------------------------------
-2001-03-20 open Liabilities:CreditCard
+; --- Credit cards ---
+; It's currently empty, here's an example: 2001-03-20 open Liabilities:CreditCard:Bancolombia
 
 ; --- Payables ---
 2001-03-20 open Liabilities:Payables:RocíoVanegasMisas
@@ -79,7 +80,7 @@
 ; ============================================================
 
 ; --- Food ---
-2001-03-20 open Expenses:Food:Groceries
+2001-03-20 open Expenses:Food:Essential
   budget_category: "essential"
 
 ; --- Transport ---
@@ -100,7 +101,7 @@
 ; To cover the shopping I need to survive. Example: Personal hygiene items I need for my own care
 2001-03-20 open Expenses:Shopping:Essential
   budget_category: "essential"
-2001-03-20 open Expenses:Shopping:Clothing
+2001-03-20 open Expenses:Shopping:Clothing:Essential
   budget_category: "essential"
 
 ; --- Other ---
@@ -113,9 +114,11 @@
 ; ============================================================
 
 ; --- Food ---
-2001-03-20 open Expenses:Food:Dining
+2001-03-20 open Expenses:Food:Nonessential
   budget_category: "nonessential"
 2001-03-20 open Expenses:Food:Delivery
+  budget_category: "nonessential"
+2001-03-20 open Expenses:Food:Dining
   budget_category: "nonessential"
 
 ; --- Transport ---
@@ -131,6 +134,8 @@
 ; --- Shopping ---
 ; To buy discretionary purchases I could live without
 2001-03-20 open Expenses:Shopping:Nonessential
+  budget_category: "nonessential"
+2001-03-20 open Expenses:Shopping:Clothing:Nonessential
   budget_category: "nonessential"
 
 ; --- Other ---

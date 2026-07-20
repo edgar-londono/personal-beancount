@@ -15,7 +15,6 @@
   Expenses:Housing:Utilities                        592820 COP
   Assets:Bank:Nequi
 
-
 2026-07-16 * "Health - Oral" "Daniela Correa made bruxism mouthguards for me and Luna, plus a home visit fee - $100 per mouthguard, $20 home visit"
   time: "19:09"
   place: "Colombia, Antioquia, Medellín"
@@ -42,6 +41,12 @@
   Assets:Bank:Nequi                                 50000 COP
   Income:Gifts:RocíoVanegasMisas
 
+2026-07-17 * "DiDi" "Shuttle from Urbanización Florence to Tierra Grata Cumbres"
+  time: "20:20"
+  place: "Colombia, Antioquia, Medellín"
+  Expenses:Transport:Essential                      14300 COP
+  Assets:Bank:Nequi
+
 2026-07-18 * "DiDi" "Shuttle from Tierra Grata Cumbres to Centro Comercial Monterrey"
   time: "13:50"
   place: "Colombia, Antioquia, Envigado"
@@ -51,15 +56,15 @@
 2026-07-18 * "Masters PC" "We took Luisa’s computer to the Monterrey Shopping Centre (where we were helped by Juan Navarro) to have it repaired, but they couldn’t fix it"
   time: "15:03"
   place: "Colombia, Antioquia, Medellín"
-  beneficiary: "Luisa Fernanda Lozano Eljach"
   Expenses:Gifts                                    50000 COP
+    beneficiary: "Luisa Fernanda Lozano Eljach"
   Assets:Bank:Nequi
 
 2026-07-18 * "Frisby" "Lunch at Centro Comercial Monterrey"
   time: "15:15"
   place: "Colombia, Antioquia, Medellín"
-  beneficiary: "Luisa Fernanda Lozano Eljach"
   Expenses:Food:Dining                              34000 COP
+    beneficiary: "Luisa Fernanda Lozano Eljach"
   Assets:Bank:Nequi
 
 2026-07-18 * "El Sasonazo" "Lunch at Centro Comercial Monterrey"
@@ -74,30 +79,18 @@
   Expenses:Transport:Essential                      9265 COP
   Assets:Bank:Nequi
 
-2026-07-18 * "Luisa Fernanda Lozano Eljach" "Borrowed money"
+2026-07-18 * "Luisa Fernanda Lozano Eljach" "I borrowed money from Luisa because I didn't have any cash and needed to go shopping at D1"
   time: "16:17"
   place: "Colombia, Antioquia, Envigado"
-  Assets:Bank:Nequi                                 15000 COP
+  Assets:Cash:Wallet                                15000 COP
   Liabilities:Payables:LuisaFernandaLozanoEljach
 
 2026-07-18 * "D1" "Two bags of whole milk, two toothbrushes, and one deodorant"
   time: "16:35"
   place: "Colombia, Antioquia, Envigado"
-  Expenses:Food:Groceries                           6500 COP
+  Expenses:Food:Essential                           6500 COP
   Expenses:Shopping:Essential                       8500 COP
-  Assets:Bank:Nequi
-
-2026-07-19 * "Dentistry" "Bruxism mouthguard - Daniela Correa made me a bruxism mouthguard at home, she came round to take my measurements and then brought it round to me. $100 for the bruxism mouthguard and $20 for the home visit"
-  time: "19:09"
-  place: "Colombia, Antioquia, Medellín"
-  Expenses:Health                                   120000 COP
-  Assets:Bank:Nequi
-
-2026-07-19 * "DiDi" "Shuttle from Urbanización Florence to Tierra Grata Cumbres"
-  time: "20:20"
-  place: "Colombia, Antioquia, Medellín"
-  Expenses:Transport:Essential                      14300 COP
-  Assets:Bank:Nequi
+  Assets:Cash:Wallet
 
 2026-07-19 * "Luisa Fernanda Lozano Eljach" "Loan repayment"
   time: "14:52"
@@ -113,10 +106,23 @@
     beneficiary: "Luisa Fernanda Lozano Eljach"
   Assets:Bank:Nequi
 
-  2026-07-20 * "Minimercado Alto de Misael" "Bird food and papaya for feeding birds"
+2026-07-20 * "Minimercado Alto de Misael" "Bird food and papaya for feeding birds"
   time: "09:41"
   place: "Colombia, Antioquia, Envigado"
-  Expenses:Shopping:NonEssential                     8400 COP
+  Expenses:Food:Nonessential                        8400 COP
     beneficiary: "Luisa Fernanda Lozano Eljach"
-  Expenses:Food:Groceries                           15500 COP
+  Expenses:Food:Essential                           15500 COP
+  Assets:Bank:Nequi
+
+2026-07-20 * "Mitos Comida Típica" "We ordered lunch because there was nothing to cook, and we were too tired to order, wait for it to arrive, and prepare it"
+  time: "17:57"
+  place: "Colombia, Antioquia, Medellín"
+  Expenses:Food:Delivery                            28000 COP
+    beneficiary: "Luisa Fernanda Lozano Eljach"
+  Assets:Bank:Nequi
+
+2026-07-20 * "Fortuna China" "We ordered lunch because there was nothing to cook, and we were too tired to order, wait for it to arrive, and prepare it"
+  time: "18:02"
+  place: "Colombia, Antioquia, Medellín"
+  Expenses:Food:Delivery                            25000 COP
   Assets:Bank:Nequi
