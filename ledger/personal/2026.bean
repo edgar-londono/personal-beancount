@@ -109,7 +109,16 @@
 2026-07-19 * "Dolce" "Two ice creams and a wafer"
   time: "18:05"
   place: "Colombia, Antioquia, Envigado"
-  beneficiary: "Edgar Mauricio Londoño Rodríguez"
-  beneficiary: "Luisa Fernanda Lozano Eljach"
-  Expenses:Food:Delivery                            23500 COP
+  Expenses:Food:Delivery                            13400 COP
+    beneficiary: "Edgar Mauricio Londoño Rodríguez"
+  Expenses:Food:Delivery                            10100 COP
+    beneficiary: "Luisa Fernanda Lozano Eljach"
+  Assets:Bank:Nequi
+
+  2026-07-20 * "Minimercado Alto de Misael" "Bird food and papaya for feeding birds"
+  time: "09:41"
+  place: "Colombia, Antioquia, Envigado"
+  Expenses:Shopping:NonEssential                     8400 COP
+    beneficiary: "Luisa Fernanda Lozano Eljach"
+  Expenses:Food:Groceries                           15500 COP
   Assets:Bank:Nequi
