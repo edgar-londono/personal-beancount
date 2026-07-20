@@ -1,8 +1,6 @@
-; ============================================================
-; 2026.BEAN — Transactions for 2026
-; ============================================================
 
-2026-07-16 * "Transfer" "Transferring money from Bancolombia (my main account) to Nequi (the account I use to cover my expenses). This was to pay for: utilities, internet, a bruxism mouthguard, and to set aside some money to spend over the weekend with Luisa"
+
+2026-07-16 * "Transfer" "Transferring money from Bancolombia, my main account, to Nequi, the account I use to cover my expenses. This was to pay for: utilities, internet, a bruxism mouthguard, and to set aside some money to spend over the weekend with Luisa"
   time: "18:07"
   place: "Colombia, Antioquia, Medellín"
   Assets:Bank:Nequi                                 1200000 COP
@@ -15,19 +13,11 @@
   Expenses:Housing:Utilities                        592820 COP
   Assets:Bank:Nequi
 
-
-2026-07-16 * "Health - Oral" "Daniela Correa made bruxism mouthguards for me and Luna, plus a home visit fee - $100 per mouthguard, $20 home visit"
+2026-07-19 * "Dentistry" "Bruxism mouthguard - Daniela Correa made me a bruxism mouthguard at home, she came round to take my measurements and then brought it round to me. $100 for the bruxism mouthguard and $20 for the home visit"
   time: "19:09"
   place: "Colombia, Antioquia, Medellín"
   Expenses:Health                                   120000 COP
-  Assets:Receivables:LunaMarysolRodríguezVanegas     100000 COP
   Assets:Bank:Nequi
-
-2026-07-16 * "Luna Marysol Rodríguez Vanegas" "Repaid her share of the bruxism mouthguard"
-  time: "19:11"
-  place: "Colombia, Antioquia, Medellín"
-  Assets:Bank:Nequi                                 100000 COP
-  Assets:Receivables:LunaMarysolRodríguezVanegas
 
 2026-07-16 * "Tigo" "Internet, TV, and cell phone plan"
   time: "19:47"
@@ -39,8 +29,14 @@
 2026-07-17 * "Rocío Vanegas Misas" "My mom, Rocío, gives me money to pay for a private car ride instead of riding a motorcycle."
   time: "17:30"
   place: "Colombia, Antioquia, Medellín"
-  Assets:Bank:Nequi                                 50000 COP
-  Income:Gifts:RocíoVanegasMisas
+  Income:Gifts:RocíoVanegasMisas                    50000 COP
+  Assets:Bank:Nequi
+
+2026-07-19 * "DiDi" "Shuttle from Urbanización Florence to Tierra Grata Cumbres"
+  time: "20:20"
+  place: "Colombia, Antioquia, Medellín"
+  Expenses:Transport:Essential                      14300 COP
+  Assets:Bank:Nequi
 
 2026-07-18 * "DiDi" "Shuttle from Tierra Grata Cumbres to Centro Comercial Monterrey"
   time: "13:50"
@@ -88,28 +84,8 @@
   Expenses:Shopping:Essential                       8500 COP
   Assets:Bank:Nequi
 
-2026-07-19 * "Dentistry" "Bruxism mouthguard - Daniela Correa made me a bruxism mouthguard at home, she came round to take my measurements and then brought it round to me. $100 for the bruxism mouthguard and $20 for the home visit"
-  time: "19:09"
-  place: "Colombia, Antioquia, Medellín"
-  Expenses:Health                                   120000 COP
-  Assets:Bank:Nequi
-
-2026-07-19 * "DiDi" "Shuttle from Urbanización Florence to Tierra Grata Cumbres"
-  time: "20:20"
-  place: "Colombia, Antioquia, Medellín"
-  Expenses:Transport:Essential                      14300 COP
-  Assets:Bank:Nequi
-
 2026-07-19 * "Luisa Fernanda Lozano Eljach" "Loan repayment"
   time: "14:52"
   place: "Colombia, Antioquia, Envigado"
   Liabilities:Payables:LuisaFernandaLozanoEljach    15000 COP
-  Assets:Bank:Nequi
-
-2026-07-19 * "Dolce" "Two ice creams and a wafer"
-  time: "18:05"
-  place: "Colombia, Antioquia, Envigado"
-  beneficiary: "Edgar Mauricio Londoño Rodríguez"
-  beneficiary: "Luisa Fernanda Lozano Eljach"
-  Expenses:Food:Delivery                            23500 COP
   Assets:Bank:Nequi

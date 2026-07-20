@@ -28,10 +28,6 @@
 ; --- Savings ---
 2001-03-20 open Assets:Savings:EmergencyFund
 
-; --- Receivables ---
-2001-03-20 open Assets:Receivables:RocíoVanegasMisas
-2001-03-20 open Assets:Receivables:LuisaFernandaLozanoEljach
-
 
 ; ------------------------------------------------------------
 ; LIABILITIES — Things I owe
@@ -98,7 +94,6 @@
 
 ; --- Shopping ---
 ; To cover the shopping I need to survive. Example: Personal hygiene items I need for my own care
-2001-03-20 open Expenses:Shopping:Essential
   budget_category: "essential"
 2001-03-20 open Expenses:Shopping:Clothing
   budget_category: "essential"
