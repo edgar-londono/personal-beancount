@@ -148,3 +148,9 @@
   note: "We ordered lunch because there was nothing to cook, and we were too tired to order, wait for it to arrive, and prepare it"
   Expenses:Food:Delivery                            25000 COP
   Assets:Bank:Nequi
+
+2026-07-21 * "DiDi" "Shuttle from Tierra Grata Cumbres to RAM BPO"
+  time: "07:27"
+  place: "Colombia, Antioquia, Envigado"
+  Expenses:Transport:Nonessential                    12305 COP
+  Assets:Bank:Nequi
