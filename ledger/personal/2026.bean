@@ -1,23 +1,41 @@
 ; ============================================================
-; 2026.BEAN — Transactions for 2026
+; 2026.bean — Transactions for 2026
+;
+; 1. Purpose: This file contains all financial transactions for the year 2026.
+; 2. Beneficiary rules:
+;       - Do not write the ledger owner's name for beneficiaries.
+;       - Leave your own expenses without a beneficiary tag (implicitly yours).
+;       - Tag other people using the beneficiary tag indented under their 
+;       specific expense line.
+;       - For split expenses, create separate posting lines and tag only 
+;       the other person on their respective line.
+; 3. Metadata and formatting rules:
+;       - Place specific metadata (such as beneficiary or property) under 
+;       the specific posting line, never under the main transaction header.
+;       - Start every transaction date at the absolute left margin with 
+;       no indentation.
+;       - Keep narrations short and concise. Use the note tag on the 
+;       following line for long explanations or context.
 ; ============================================================
 
-2026-07-16 * "Transfer" "Transferring money from Bancolombia (my main account) to Nequi (the account I use to cover my expenses). This was to pay for: utilities, internet, a bruxism mouthguard, and to set aside some money to spend over the weekend with Luisa"
+2026-07-16 * "Transfer" "Transfer to cover expenses"
   time: "18:07"
   place: "Colombia, Antioquia, Medellín"
+  note: "Transferring money from Bancolombia (my main account) to Nequi. This was to pay for: utilities, internet, a bruxism mouthguard, and to set aside some money to spend over the weekend with Luisa"
   Assets:Bank:Nequi                                 1200000 COP
   Assets:Bank:Bancolombia
 
 2026-07-16 * "Empresas Públicas de Medellín (EPM)" "Water supply, sewer, electricity, and gas"
   time: "18:45"
   place: "Colombia, Antioquia, Medellín"
-  property: "Calle 44c # 91-54 - Unidad Jardines - Apartamento 1501"
   Expenses:Housing:Utilities                        592820 COP
+    property: "Calle 44c # 91-54 - Unidad Jardines - Apartamento 1501"
   Assets:Bank:Nequi
 
-2026-07-16 * "Health - Oral" "Daniela Correa made bruxism mouthguards for me and Luna, plus a home visit fee - $100 per mouthguard, $20 home visit"
+2026-07-16 * "Health - Oral" "Bruxism mouthguards and home visit"
   time: "19:09"
   place: "Colombia, Antioquia, Medellín"
+  note: "Daniela Correa made bruxism mouthguards for me and Luna, plus a home visit fee - $100 per mouthguard, $20 home visit"
   Expenses:Health                                   120000 COP
   Assets:Receivables:LunaMarysolRodríguezVanegas     100000 COP
   Assets:Bank:Nequi
@@ -31,13 +49,14 @@
 2026-07-16 * "Tigo" "Internet, TV, and cell phone plan"
   time: "19:47"
   place: "Colombia, Antioquia, Medellín"
-  property: "Calle 44c # 91-54 - Unidad Jardines - Apartamento 1501"
   Expenses:Housing:Internet                         149900 COP
+    property: "Calle 44c # 91-54 - Unidad Jardines - Apartamento 1501"
   Assets:Bank:Nequi
 
-2026-07-17 * "Rocío Vanegas Misas" "My mom, Rocío, gives me money to pay for a private car ride instead of riding a motorcycle."
+2026-07-17 * "Rocío Vanegas Misas" "Gift for car ride"
   time: "17:30"
   place: "Colombia, Antioquia, Medellín"
+  note: "My mom, Rocío, gives me money to pay for a private car ride instead of riding a motorcycle."
   Assets:Bank:Nequi                                 50000 COP
   Income:Gifts:RocíoVanegasMisas
 
@@ -53,9 +72,10 @@
   Expenses:Transport:Essential                      12040 COP
   Assets:Bank:Nequi
 
-2026-07-18 * "Masters PC" "We took Luisa’s computer to the Monterrey Shopping Centre (where we were helped by Juan Navarro) to have it repaired, but they couldn’t fix it"
+2026-07-18 * "Masters PC" "Computer repair attempt"
   time: "15:03"
   place: "Colombia, Antioquia, Medellín"
+  note: "We took Luisa’s computer to the Monterrey Shopping Centre (where we were helped by Juan Navarro) to have it repaired, but they couldn’t fix it"
   Expenses:Gifts                                    50000 COP
     beneficiary: "Luisa Fernanda Lozano Eljach"
   Assets:Bank:Nequi
@@ -114,15 +134,17 @@
   Expenses:Food:Essential                           15500 COP
   Assets:Bank:Nequi
 
-2026-07-20 * "Mitos Comida Típica" "We ordered lunch because there was nothing to cook, and we were too tired to order, wait for it to arrive, and prepare it"
+2026-07-20 * "Mitos Comida Típica" "Lunch delivery"
   time: "17:57"
   place: "Colombia, Antioquia, Medellín"
+  note: "We ordered lunch because there was nothing to cook, and we were too tired to order, wait for it to arrive, and prepare it"
   Expenses:Food:Delivery                            28000 COP
     beneficiary: "Luisa Fernanda Lozano Eljach"
   Assets:Bank:Nequi
 
-2026-07-20 * "Fortuna China" "We ordered lunch because there was nothing to cook, and we were too tired to order, wait for it to arrive, and prepare it"
+2026-07-20 * "Fortuna China" "Lunch delivery"
   time: "18:02"
   place: "Colombia, Antioquia, Medellín"
+  note: "We ordered lunch because there was nothing to cook, and we were too tired to order, wait for it to arrive, and prepare it"
   Expenses:Food:Delivery                            25000 COP
   Assets:Bank:Nequi

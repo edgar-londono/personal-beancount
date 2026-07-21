@@ -1,12 +1,25 @@
 ; ============================================================
-; ACCOUNTS.BEAN — Chart of accounts
+; accounts.bean — Chart of accounts
 ;
-; 1. This file defines the chart of accounts for the ledger.
-; 2. Notes:
+; 1. Purpose: This file defines the chart of accounts for the ledger.
+; 2. Usage notes:
 ;       - It is included in main.bean and should not be included
 ;       directly in any other file.
 ;       - To close an account, add a new line with the date
 ;       and the "close" directive.
+; 3. Naming rules:
+;       - Disambiguation rule: Only use a budget category suffix in 
+;       the account name to disambiguate a broad category that is split 
+;       (e.g., Expenses:Food:Essential and Expenses:Food:Nonessential).
+;       - Absolute categories: If an account strictly belongs  
+;       to one budget category, omit the suffix from the name 
+;       (e.g., Expenses:Health, Expenses:Entertainment).
+;       - Specificity: Asset and liability accounts must explicitly 
+;       state the institution name.
+; 4. Metadata rules:
+;       - Every expense account must have a budget_category metadata tag.
+;       - Tags must be strictly lowercase: "future", "essential", 
+;       or "nonessential".
 ; ============================================================
 
 ; ------------------------------------------------------------
