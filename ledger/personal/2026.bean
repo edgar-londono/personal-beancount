@@ -154,3 +154,18 @@
   place: "Colombia, Antioquia, Envigado"
   Expenses:Transport:Nonessential                    12305 COP
   Assets:Bank:Nequi
+
+2026-07-21 * "Panadería Elkin" "After-work snack"
+  time: "17:17"
+  place: "Colombia, Antioquia, Medellín"
+  note: "Buying 2 churros, 4 cookies, and 1 cheese stick. Just one churro was for Cristian, the rest was for me and Luisa"
+  Expenses:Food:Dining                              5500 COP
+  Expenses:Food:Dining                              1500 COP
+    beneficiary: "Cristian David Tamayo Hernandez"
+  Assets:Bank:Nequi
+
+2026-07-21 * "DiDi" "Shuttle from RAM BPO to Tierra Grata Cumbres"
+  time: "17:53"
+  place: "Colombia, Antioquia, Medellín"
+  Expenses:Transport:Nonessential                    12100 COP
+  Assets:Bank:Nequi
