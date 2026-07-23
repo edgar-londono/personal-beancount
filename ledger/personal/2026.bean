@@ -152,7 +152,7 @@
 2026-07-21 * "DiDi" "Shuttle from Tierra Grata Cumbres to RAM BPO"
   time: "07:27"
   place: "Colombia, Antioquia, Envigado"
-  Expenses:Transport:Nonessential                    12305 COP
+  Expenses:Transport:Nonessential                   12305 COP
   Assets:Bank:Nequi
 
 2026-07-21 * "Panadería Elkin" "After-work snack"
@@ -167,5 +167,14 @@
 2026-07-21 * "DiDi" "Shuttle from RAM BPO to Tierra Grata Cumbres"
   time: "17:53"
   place: "Colombia, Antioquia, Medellín"
-  Expenses:Transport:Nonessential                    12100 COP
+  Expenses:Transport:Nonessential                   12100 COP
+  Assets:Bank:Nequi
+
+2026-07-22 * "Pollos Mario" "Lunch delivery"
+  time: "16:44"
+  place: "Colombia, Antioquia, Envigado"
+  note: "We ordered lunch because there was nothing to cook, and we were too tired to order, wait for it to arrive, and prepare it"
+  Expenses:Food:Delivery                            14950 COP
+  Expenses:Food:Delivery                            14950 COP
+    beneficiary: "Luisa Fernanda Lozano Eljach"
   Assets:Bank:Nequi
