@@ -53,8 +53,9 @@
 ; It's currently empty, here's an example: 2001-03-20 open Liabilities:CreditCard:Bancolombia
 
 ; --- Payables ---
-2001-03-20 open Liabilities:Payables:RocíoVanegasMisas
 2001-03-20 open Liabilities:Payables:LuisaFernandaLozanoEljach
+2001-03-20 open Liabilities:Payables:RocíoVanegasMisas
+2001-03-20 open Liabilities:Payables:FelipeArbeláezRodríguez
 
 ; ------------------------------------------------------------
 ; INCOME — Money coming in
@@ -63,8 +64,9 @@
 2001-03-20 open Income:Business
 
 ; --- Gifts ---
+2001-03-20 open Income:Gifts:LuisaFernandaLoza☻noEljach
 2001-03-20 open Income:Gifts:RocíoVanegasMisas
-2001-03-20 open Income:Gifts:LuisaFernandaLozanoEljach
+2001-03-20 open Income:Gifts:FelipeArbeláezRodríguez
 
 ; ------------------------------------------------------------
 ; EXPENSES — Money going out

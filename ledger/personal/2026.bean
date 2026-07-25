@@ -25,7 +25,7 @@
   Assets:Bank:Nequi                                 1200000 COP
   Assets:Bank:Bancolombia
 
-2026-07-16 * "Empresas Públicas de Medellín (EPM)" "Water supply, sewer, electricity, and gas"
+2026-07-16 * "Empresas Públicas de Medellín (EPM)" "Contract number: 7800787. Water supply, sewer, electricity, and gas"
   time: "18:45"
   place: "Colombia, Antioquia, Medellín"
   Expenses:Housing:Utilities                        592820 COP
@@ -76,7 +76,7 @@
   time: "15:03"
   place: "Colombia, Antioquia, Medellín"
   note: "We took Luisa’s computer to the Monterrey Shopping Centre (where we were helped by Juan Navarro) to have it repaired, but they couldn’t fix it"
-  Expenses:Gifts                                    50000 COP
+  Expenses:Gifts:LuisaFernandaLozanoEljach          50000 COP
     beneficiary: "Luisa Fernanda Lozano Eljach"
   Assets:Bank:Nequi
 
@@ -177,4 +177,38 @@
   Expenses:Food:Delivery                            14950 COP
   Expenses:Food:Delivery                            14950 COP
     beneficiary: "Luisa Fernanda Lozano Eljach"
+  Assets:Bank:Nequi
+
+2026-07-22 * "Felipe Arbeláez Rodríguez" "Gift for going out with his girlfriend"
+  time: "21:17"
+  place: "Colombia, Antioquia, Envigado"
+  note: "So that Felipe can go out with his girlfriend"
+  Expenses:Gifts:FelipeArbeláezRodríguez            35000 COP
+  Assets:Bank:Nequi
+
+2026-07-24 * "Tienda El Chocho" "Avocado for lunch"
+  time: "12:46"
+  place: "Colombia, Antioquia, Envigado"
+  Expenses:Food:Essential                           10500 COP
+  Assets:Bank:Nequi
+
+2026-07-24 * "Luisa Fernanda Lozano Eljach" "THC vape for Luisa"
+  time: "17:11"
+  place: "Colombia, Antioquia, Medellín"
+  Expenses:Gifts:LuisaFernandaLozanoEljach          45000 COP
+  Assets:Bank:Nequi
+
+2026-07-24 * "Empresas Públicas de Medellín (EPM)" "Contract number: 708450. Water supply, sewer, electricity, and gas"
+  time: "21:43"
+  place: "Colombia, Antioquia, Medellín"
+  note: "Paying the utility bills for the house in Bello: my mum, Rocío, asked me to pay the bills and gave me the money to do so"
+  Expenses:Housing:Utilities                        589167 COP
+    property: "Carrera 54a Calle 47-16 - Bello"
+    beneficiary: "Rocío Vanegas Misas"
+  Assets:Bank:Nequi
+
+2026-07-25 * "Luisa Fernanda Lozano Eljach" "THC vape for Luisa"
+  time: "11:46"
+  place: "Colombia, Antioquia, Medellín"
+  Expenses:Gifts:LuisaFernandaLozanoEljach          30000 COP
   Assets:Bank:Nequi
