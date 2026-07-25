@@ -184,6 +184,7 @@
   place: "Colombia, Antioquia, Envigado"
   note: "So that Felipe can go out with his girlfriend"
   Expenses:Gifts:FelipeArbeláezRodríguez            35000 COP
+    beneficiary: "Felipe Arbeláez Rodríguez"
   Assets:Bank:Nequi
 
 2026-07-24 * "Tienda El Chocho" "Avocado for lunch"
@@ -196,6 +197,7 @@
   time: "17:11"
   place: "Colombia, Antioquia, Medellín"
   Expenses:Gifts:LuisaFernandaLozanoEljach          45000 COP
+    beneficiary: "Luisa Fernanda Lozano Eljach"
   Assets:Bank:Nequi
 
 2026-07-24 * "Empresas Públicas de Medellín (EPM)" "Contract number: 708450. Water supply, sewer, electricity, and gas"
@@ -211,4 +213,5 @@
   time: "11:46"
   place: "Colombia, Antioquia, Medellín"
   Expenses:Gifts:LuisaFernandaLozanoEljach          30000 COP
+    beneficiary: "Luisa Fernanda Lozano Eljach"
   Assets:Bank:Nequi
