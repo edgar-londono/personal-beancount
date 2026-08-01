@@ -53,11 +53,18 @@
     property: "Calle 44c # 91-54 - Unidad Jardines - Apartamento 1501"
   Assets:Bank:Nequi
 
+2026-07-17 * "Rocío Vanegas Misas" "Rent deposit to my account"
+  time: "18:46"
+  place: "Colombia, Antioquia, Medellín"
+  note: "My mom, Rocío, has the rent money deposited into my account. I don't know which property it's from"
+  Assets:Bank:Nequi                                 786029 COP
+  Liabilities:Payables:RocíoVanegasMisas
+
 2026-07-17 * "Rocío Vanegas Misas" "Gift for car ride"
   time: "17:30"
   place: "Colombia, Antioquia, Medellín"
-  note: "My mom, Rocío, gives me money to pay for a private car ride instead of riding a motorcycle."
-  Assets:Bank:Nequi                                 50000 COP
+  note: "My mom, Rocío, tells me to take the car ride money from the rent deposit I am holding for her"
+  Liabilities:Payables:RocíoVanegasMisas             50000 COP
   Income:Gifts:RocíoVanegasMisas
 
 2026-07-17 * "DiDi" "Shuttle from Urbanización Florence to Tierra Grata Cumbres"
@@ -99,9 +106,10 @@
   Expenses:Transport:Essential                      9265 COP
   Assets:Bank:Nequi
 
-2026-07-18 * "Luisa Fernanda Lozano Eljach" "I borrowed money from Luisa because I didn't have any cash and needed to go shopping at D1"
+2026-07-18 * "Luisa Fernanda Lozano Eljach" "Cash loan"
   time: "16:17"
   place: "Colombia, Antioquia, Envigado"
+  note: "I borrowed money from Luisa because I didn't have any cash and needed to go shopping at D1"
   Assets:Cash:Wallet                                15000 COP
   Liabilities:Payables:LuisaFernandaLozanoEljach
 
@@ -187,6 +195,27 @@
     beneficiary: "Felipe Arbeláez Rodríguez"
   Assets:Bank:Nequi
 
+2026-07-24 * "Luisa Fernanda Lozano Eljach" "Financial help to pay a loan"
+  time: "11:11"
+  place: "Colombia, Antioquia, Medellín"
+  Expenses:Gifts:LuisaFernandaLozanoEljach          29000 COP
+    beneficiary: "Luisa Fernanda Lozano Eljach"
+  Assets:Bank:Nequi
+
+2026-07-24 * "Luisa Fernanda Lozano Eljach" "Financial help to pay a loan"
+  time: "11:12"
+  place: "Colombia, Antioquia, Medellín"
+  Expenses:Gifts:LuisaFernandaLozanoEljach          1000 COP
+    beneficiary: "Luisa Fernanda Lozano Eljach"
+  Assets:Bank:Nequi
+
+2026-07-24 * "Luisa Fernanda Lozano Eljach" "Financial help to pay a loan"
+  time: "11:22"
+  place: "Colombia, Antioquia, Medellín"
+  Expenses:Gifts:LuisaFernandaLozanoEljach          16000 COP
+    beneficiary: "Luisa Fernanda Lozano Eljach"
+  Assets:Bank:Nequi
+
 2026-07-24 * "Tienda El Chocho" "Avocado for lunch"
   time: "12:46"
   place: "Colombia, Antioquia, Envigado"
@@ -204,7 +233,7 @@
   time: "21:43"
   place: "Colombia, Antioquia, Medellín"
   note: "Paying the utility bills for the house in Bello: my mum, Rocío, asked me to pay the bills and gave me the money to do so"
-  Expenses:Housing:Utilities                        589167 COP
+  Liabilities:Payables:RocíoVanegasMisas             590903.86 COP
     property: "Carrera 54a Calle 47-16 - Bello"
     beneficiary: "Rocío Vanegas Misas"
   Assets:Bank:Nequi
@@ -214,4 +243,39 @@
   place: "Colombia, Antioquia, Medellín"
   Expenses:Gifts:LuisaFernandaLozanoEljach          30000 COP
     beneficiary: "Luisa Fernanda Lozano Eljach"
+  Expenses:Taxes                                    120 COP
+  Assets:Bank:Nequi
+
+2026-07-26 * "Felipe Arbeláez Rodríguez" "My mom, Rocío, told me to give them to Felipe"
+  time: "12:01"
+  place: "Colombia, Antioquia, Medellín"
+  Liabilities:Payables:RocíoVanegasMisas             60240 COP
+    beneficiary: "Felipe Arbeláez Rodríguez"
+  Assets:Bank:Nequi
+
+2026-07-26 * "Uber" "Shuttle from Tierra Grata Cumbres to Unidad Jardines"
+  time: "12:18"
+  place: "Colombia, Antioquia, Medellín"
+  Expenses:Transport:Essential                    17400 COP
+  Expenses:Taxes                                  69.60 COP
+  Assets:Bank:Nequi
+
+2026-07-26 * "Señor Chino" "Lunch for 4"
+  time: "12:18"
+  place: "Colombia, Antioquia, Medellín"
+  Expenses:Food:Delivery                            12025 COP
+    beneficiary: "Luisa Fernanda Lozano Eljach"
+  Expenses:Food:Delivery                            12025 COP
+    beneficiary: "Rocío Vanegas Misas"
+  Expenses:Food:Delivery                            12025 COP
+    beneficiary: "Felipe Arbeláez Rodríguez"
+  Expenses:Food:Delivery                            12025 COP
+  Expenses:Taxes                                      192.40 COP
+  Assets:Bank:Nequi
+
+2026-07-26 * "Señor Chino" "Lunch for 4"
+  time: "12:18"
+  place: "Colombia, Antioquia, Medellín"
+  Expenses:Transport:Essential                    48100 COP
+  Expenses:Taxes                                  192.40 COP
   Assets:Bank:Nequi

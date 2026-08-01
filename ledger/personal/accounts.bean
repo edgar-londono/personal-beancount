@@ -122,6 +122,8 @@
 ; --- Other ---
 2001-03-20 open Expenses:Health
   budget_category: "essential"
+2026-07-26 open Expenses:Taxes
+  budget_category: "essential"
 
 
 ; ============================================================
