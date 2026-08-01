@@ -302,6 +302,12 @@
   Expenses:Taxes                                    192.40 COP
   Assets:Bank:Nequi
 
+2026-07-26 * "Luisa Fernanda Lozano Eljach" "Money received"
+  time: "17:35"
+  location: "Colombia, Antioquia, Medellín"
+  Assets:Bank:Nequi                                 5000 COP
+  Liabilities:Payables:LuisaFernandaLozanoEljach    
+
 2026-07-27 * "Transfer" "Transfer between own accounts"
   time: "18:07"
   location: "Colombia, Antioquia, Medellín"
@@ -318,12 +324,26 @@
   Assets:Bank:Bancolombia                           22.06 COP
   Income:Interest
 
+2026-07-27 * "Luisa Fernanda Lozano Eljach" "Money for groceries"
+  time: "19:49"
+  location: "Colombia, Antioquia, Medellín"
+  note: "Luisa gave me money for grocery shopping"
+  Assets:Bank:Nequi                                 16000 COP
+  Liabilities:Payables:LuisaFernandaLozanoEljach    
+
 2026-07-27 * "Luisa Fernanda Lozano Eljach" "THC vape for Luisa"
   time: "19:50"
   location: "Colombia, Antioquia, Medellín"
   Expenses:Gifts:LuisaFernandaLozanoEljach          35000 COP
     beneficiary: "Luisa Fernanda Lozano Eljach"
   Assets:Bank:Bancolombia
+
+2026-07-27 * "Los Cuñados" "Grocery shopping"
+  time: "20:09"
+  location: "Colombia, Antioquia, Medellín"
+  Expenses:Food:Essential                           16400 COP
+  Expenses:Taxes                                    65.60 COP
+  Assets:Bank:Nequi
 
 2026-07-28 * "Los Cuñados" "Home delivery of groceries from the shop"
   time: "10:48"
@@ -382,7 +402,7 @@
 
 2026-07-30 * "Luisa Fernanda Lozano Eljach" "Financial help"
   time: "07:11"
-  place: "Colombia, Antioquia, Medellín"
+  location: "Colombia, Antioquia, Medellín"
   Expenses:Gifts:LuisaFernandaLozanoEljach          30000 COP
     beneficiary: "Luisa Fernanda Lozano Eljach"
   Assets:Bank:Bancolombia
@@ -413,7 +433,7 @@
 
 2026-07-31 * "Luisa Fernanda Lozano Eljach" "Transport allowance for master degree at EAFIT"
   time: "17:31"
-  place: "Colombia, Antioquia, Medellín"
+  location: "Colombia, Antioquia, Medellín"
   Expenses:Gifts:LuisaFernandaLozanoEljach          30000 COP
     beneficiary: "Luisa Fernanda Lozano Eljach"
   Assets:Bank:Bancolombia
