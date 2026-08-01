@@ -36,7 +36,7 @@
 ; To cover daily expenses
 2001-03-20 open Assets:Bank:Nequi
 ; To invest and shop online
-2001-03-20 open Assets:Bank:Nu
+2026-06-26 open Assets:Bank:Nu
 
 ; --- Savings ---
 2001-03-20 open Assets:Savings:EmergencyFund
@@ -62,6 +62,7 @@
 ; ------------------------------------------------------------
 2001-03-20 open Income:Salary
 2001-03-20 open Income:Business
+2001-03-20 open Income:Interest
 
 ; --- Gifts ---
 2001-03-20 open Income:Gifts:LuisaFernandaLoza☻noEljach
@@ -162,3 +163,9 @@
   budget_category: "nonessential"
 2001-03-20 open Expenses:Subscriptions
   budget_category: "nonessential"
+
+; ============================================================
+; UNKNOWN
+; ============================================================
+; Unrecognised transactions. I can’t remember where they came from
+2001-03-20 open Expenses:Unknown
