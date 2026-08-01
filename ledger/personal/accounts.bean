@@ -86,8 +86,8 @@
 ; FUTURE
 ; ============================================================
 
-; --- Study ---
-2001-03-20 open Expenses:Study
+; --- Education ---
+2001-03-20 open Expenses:Education
   budget_category: "future"
 
 

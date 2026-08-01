@@ -324,6 +324,20 @@
   Assets:Bank:Bancolombia                           22.06 COP
   Income:Interest
 
+2026-07-27 * "Preply" "Language lessons (English)"
+  time: "18:58"
+  place: "Colombia, Antioquia, Medellín"
+  Expenses:Education                                5779.01 COP
+  Expenses:Taxes                                    23.12 COP
+  Assets:Bank:Nu
+
+2026-07-27 * "Preply" "Language lessons (English)"
+  time: "19:35"
+  place: "Colombia, Antioquia, Medellín"
+  Expenses:Education                                13805.41 COP
+  Expenses:Taxes                                    55.22 COP
+  Assets:Bank:Nu
+
 2026-07-27 * "Luisa Fernanda Lozano Eljach" "Money for groceries"
   time: "19:49"
   location: "Colombia, Antioquia, Medellín"
@@ -420,6 +434,13 @@
   location: "Colombia, Antioquia, Medellín"
   Assets:Bank:Nu                                    200000 COP
   Assets:Bank:Bancolombia
+
+2026-07-30 * "Preply" "Language lessons (English)"
+  time: "21:02"
+  place: "Colombia, Antioquia, Medellín"
+  Expenses:Education                                161591.47 COP
+  Expenses:Taxes                                    646.37 COP
+  Assets:Bank:Nu
 
 2026-07-30 * "Bancolombia" "Bank interest"
   Assets:Bank:Bancolombia                              1.62 COP
