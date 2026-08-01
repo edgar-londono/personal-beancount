@@ -10,31 +10,50 @@
 ;       - For split expenses, create separate posting lines and tag only 
 ;       the other person on their respective line.
 ; 3. Metadata and formatting rules:
-;       - Place specific metadata (such as beneficiary or property) under 
+;       - Location specific metadata (such as beneficiary or property) under 
 ;       the specific posting line, never under the main transaction header.
 ;       - Start every transaction date at the absolute left margin with 
 ;       no indentation.
 ;       - Keep narrations short and concise. Use the note tag on the 
 ;       following line for long explanations or context.
+;       - Omit the time and location lines entirely if specific transaction 
+;       details are unknown.
+;       - Do not repeat account names or line amounts in the main narration 
+;       if the data is already in the posting lines.
+; 4. Chronological sorting:
+;       - Keep all transactions strictly organized in chronological order by date.
+; 5. Tag standardization:
+;       - Write all standard custom metadata values (such as transport_mode) 
+;       entirely in lowercase.
+;       - Maintain correct capitalization and spelling for proper nouns inside 
+;       tags (such as beneficiary names or specific property locations).
+; 6. Transport mode tracking:
+;       - Use the transport_mode tag indented under transport posting lines 
+;       to track the specific vehicle type.
 ; ============================================================
+
+2026-07-15 * "RAM BPO SAS" "Payroll"
+  location: "Colombia, Antioquia, Medellín"
+  Assets:Bank:Bancolombia                           1691875 COP
+  Income:Salary
 
 2026-07-16 * "Transfer" "Transfer to cover expenses"
   time: "18:07"
-  place: "Colombia, Antioquia, Medellín"
+  location: "Colombia, Antioquia, Medellín"
   note: "Transferring money from Bancolombia (my main account) to Nequi. This was to pay for: utilities, internet, a bruxism mouthguard, and to set aside some money to spend over the weekend with Luisa"
   Assets:Bank:Nequi                                 1200000 COP
   Assets:Bank:Bancolombia
 
 2026-07-16 * "Empresas Públicas de Medellín (EPM)" "Contract number: 7800787. Water supply, sewer, electricity, and gas"
   time: "18:45"
-  place: "Colombia, Antioquia, Medellín"
+  location: "Colombia, Antioquia, Medellín"
   Expenses:Housing:Utilities                        592820 COP
     property: "Calle 44c # 91-54 - Unidad Jardines - Apartamento 1501"
   Assets:Bank:Nequi
 
 2026-07-16 * "Health - Oral" "Bruxism mouthguards and home visit"
   time: "19:09"
-  place: "Colombia, Antioquia, Medellín"
+  location: "Colombia, Antioquia, Medellín"
   note: "Daniela Correa made bruxism mouthguards for me and Luna, plus a home visit fee - $100 per mouthguard, $20 home visit"
   Expenses:Health                                   120000 COP
   Assets:Receivables:LunaMarysolRodríguezVanegas     100000 COP
@@ -42,13 +61,13 @@
 
 2026-07-16 * "Luna Marysol Rodríguez Vanegas" "Repaid her share of the bruxism mouthguard"
   time: "19:11"
-  place: "Colombia, Antioquia, Medellín"
+  location: "Colombia, Antioquia, Medellín"
   Assets:Bank:Nequi                                 100000 COP
   Assets:Receivables:LunaMarysolRodríguezVanegas
 
 2026-07-16 * "Tigo" "Internet, TV, and cell phone plan"
   time: "19:47"
-  place: "Colombia, Antioquia, Medellín"
+  location: "Colombia, Antioquia, Medellín"
   Expenses:Housing:Internet                         149900 COP
     property: "Calle 44c # 91-54 - Unidad Jardines - Apartamento 1501"
   Assets:Bank:Nequi
@@ -59,35 +78,35 @@
 
 2026-07-17 * "Rocío Vanegas Misas" "Rent deposit to my account"
   time: "18:46"
-  place: "Colombia, Antioquia, Medellín"
+  location: "Colombia, Antioquia, Medellín"
   note: "My mom, Rocío, has the rent money deposited into my account. I don't know which property it's from"
   Assets:Bank:Nequi                                 786029 COP
   Liabilities:Payables:RocíoVanegasMisas
 
 2026-07-17 * "Rocío Vanegas Misas" "Gift for car ride"
   time: "17:30"
-  place: "Colombia, Antioquia, Medellín"
+  location: "Colombia, Antioquia, Medellín"
   note: "My mom, Rocío, tells me to take the car ride money from the rent deposit I am holding for her"
   Liabilities:Payables:RocíoVanegasMisas             50000 COP
   Income:Gifts:RocíoVanegasMisas
 
 2026-07-17 * "DiDi" "Shuttle from Urbanización Florence to Tierra Grata Cumbres"
   time: "20:20"
-  place: "Colombia, Antioquia, Medellín"
+  location: "Colombia, Antioquia, Medellín"
   Expenses:Transport:Essential                      14300 COP
     transport_mode: "Car"
   Assets:Bank:Nequi
 
 2026-07-18 * "DiDi" "Shuttle from Tierra Grata Cumbres to Centro Comercial Monterrey"
   time: "13:50"
-  place: "Colombia, Antioquia, Envigado"
+  location: "Colombia, Antioquia, Envigado"
   Expenses:Transport:Essential                      12040 COP
     transport_mode: "Car"
   Assets:Bank:Nequi
 
 2026-07-18 * "Masters PC" "Computer repair attempt"
   time: "15:03"
-  place: "Colombia, Antioquia, Medellín"
+  location: "Colombia, Antioquia, Medellín"
   note: "We took Luisa’s computer to the Monterrey Shopping Centre (where we were helped by Juan Navarro) to have it repaired, but they couldn’t fix it"
   Expenses:Gifts:LuisaFernandaLozanoEljach          50000 COP
     beneficiary: "Luisa Fernanda Lozano Eljach"
@@ -95,47 +114,47 @@
 
 2026-07-18 * "Frisby" "Lunch at Centro Comercial Monterrey"
   time: "15:15"
-  place: "Colombia, Antioquia, Medellín"
+  location: "Colombia, Antioquia, Medellín"
   Expenses:Food:Dining                              34000 COP
     beneficiary: "Luisa Fernanda Lozano Eljach"
   Assets:Bank:Nequi
 
 2026-07-18 * "El Sasonazo" "Lunch at Centro Comercial Monterrey"
   time: "15:22"
-  place: "Colombia, Antioquia, Medellín"
+  location: "Colombia, Antioquia, Medellín"
   Expenses:Food:Dining                              23000 COP
   Assets:Bank:Nequi
 
 2026-07-18 * "DiDi" "Shuttle from Centro Comercial Monterrey to Tierra Grata Cumbres"
   time: "16:16"
-  place: "Colombia, Antioquia, Medellín"
+  location: "Colombia, Antioquia, Medellín"
   Expenses:Transport:Essential                      9265 COP
     transport_mode: "Car"
   Assets:Bank:Nequi
 
 2026-07-18 * "Luisa Fernanda Lozano Eljach" "Cash loan"
   time: "16:17"
-  place: "Colombia, Antioquia, Envigado"
+  location: "Colombia, Antioquia, Envigado"
   note: "I borrowed money from Luisa because I didn't have any cash and needed to go shopping at D1"
   Assets:Cash:Wallet                                15000 COP
   Liabilities:Payables:LuisaFernandaLozanoEljach
 
 2026-07-18 * "D1" "Two bags of whole milk, two toothbrushes, and one deodorant"
   time: "16:35"
-  place: "Colombia, Antioquia, Envigado"
+  location: "Colombia, Antioquia, Envigado"
   Expenses:Food:Essential                           6500 COP
   Expenses:Shopping:Essential                       8500 COP
   Assets:Cash:Wallet
 
 2026-07-19 * "Luisa Fernanda Lozano Eljach" "Loan repayment"
   time: "14:52"
-  place: "Colombia, Antioquia, Envigado"
+  location: "Colombia, Antioquia, Envigado"
   Liabilities:Payables:LuisaFernandaLozanoEljach    15000 COP
   Assets:Bank:Nequi
 
 2026-07-19 * "Dolce" "Two ice creams and a wafer"
   time: "18:05"
-  place: "Colombia, Antioquia, Envigado"
+  location: "Colombia, Antioquia, Envigado"
   Expenses:Food:Delivery                            13400 COP
   Expenses:Food:Delivery                            10100 COP
     beneficiary: "Luisa Fernanda Lozano Eljach"
@@ -143,7 +162,7 @@
 
 2026-07-20 * "Minimercado Alto de Misael" "Bird food and papaya for feeding birds"
   time: "09:41"
-  place: "Colombia, Antioquia, Envigado"
+  location: "Colombia, Antioquia, Envigado"
   Expenses:Food:Nonessential                        8400 COP
     beneficiary: "Luisa Fernanda Lozano Eljach"
   Expenses:Food:Essential                           15500 COP
@@ -151,7 +170,7 @@
 
 2026-07-20 * "Mitos Comida Típica" "Lunch delivery"
   time: "17:57"
-  place: "Colombia, Antioquia, Medellín"
+  location: "Colombia, Antioquia, Medellín"
   note: "We ordered lunch because there was nothing to cook, and we were too tired to order, wait for it to arrive, and prepare it"
   Expenses:Food:Delivery                            28000 COP
     beneficiary: "Luisa Fernanda Lozano Eljach"
@@ -159,21 +178,21 @@
 
 2026-07-20 * "Fortuna China" "Lunch delivery"
   time: "18:02"
-  place: "Colombia, Antioquia, Medellín"
+  location: "Colombia, Antioquia, Medellín"
   note: "We ordered lunch because there was nothing to cook, and we were too tired to order, wait for it to arrive, and prepare it"
   Expenses:Food:Delivery                            25000 COP
   Assets:Bank:Nequi
 
 2026-07-21 * "DiDi" "Shuttle from Tierra Grata Cumbres to RAM BPO"
   time: "07:27"
-  place: "Colombia, Antioquia, Envigado"
+  location: "Colombia, Antioquia, Envigado"
   Expenses:Transport:Nonessential                   12305 COP
     transport_mode: "Motorbike"
   Assets:Bank:Nequi
 
 2026-07-21 * "Panadería Elkin" "After-work snack"
   time: "17:17"
-  place: "Colombia, Antioquia, Medellín"
+  location: "Colombia, Antioquia, Medellín"
   note: "Buying 2 churros, 4 cookies, and 1 cheese stick. Just one churro was for Cristian, the rest was for me and Luisa"
   Expenses:Food:Dining                              5500 COP
   Expenses:Food:Dining                              1500 COP
@@ -182,14 +201,14 @@
 
 2026-07-21 * "DiDi" "Shuttle from RAM BPO to Tierra Grata Cumbres"
   time: "17:53"
-  place: "Colombia, Antioquia, Medellín"
+  location: "Colombia, Antioquia, Medellín"
   Expenses:Transport:Nonessential                   12100 COP
     transport_mode: "Motorbike"
   Assets:Bank:Nequi
 
 2026-07-22 * "Pollos Mario" "Lunch delivery"
   time: "16:44"
-  place: "Colombia, Antioquia, Envigado"
+  location: "Colombia, Antioquia, Envigado"
   note: "We ordered lunch because there was nothing to cook, and we were too tired to order, wait for it to arrive, and prepare it"
   Expenses:Food:Delivery                            14950 COP
   Expenses:Food:Delivery                            14950 COP
@@ -198,7 +217,7 @@
 
 2026-07-22 * "Felipe Arbeláez Rodríguez" "Gift for going out with his girlfriend"
   time: "21:17"
-  place: "Colombia, Antioquia, Envigado"
+  location: "Colombia, Antioquia, Envigado"
   note: "So that Felipe can go out with his girlfriend"
   Expenses:Gifts:FelipeArbeláezRodríguez            35000 COP
     beneficiary: "Felipe Arbeláez Rodríguez"
@@ -206,41 +225,41 @@
 
 2026-07-24 * "Luisa Fernanda Lozano Eljach" "Financial help to pay a loan"
   time: "11:11"
-  place: "Colombia, Antioquia, Medellín"
+  location: "Colombia, Antioquia, Medellín"
   Expenses:Gifts:LuisaFernandaLozanoEljach          29000 COP
     beneficiary: "Luisa Fernanda Lozano Eljach"
   Assets:Bank:Nequi
 
 2026-07-24 * "Luisa Fernanda Lozano Eljach" "Financial help to pay a loan"
   time: "11:12"
-  place: "Colombia, Antioquia, Medellín"
+  location: "Colombia, Antioquia, Medellín"
   Expenses:Gifts:LuisaFernandaLozanoEljach          1000 COP
     beneficiary: "Luisa Fernanda Lozano Eljach"
   Assets:Bank:Nequi
 
 2026-07-24 * "Luisa Fernanda Lozano Eljach" "Financial help to pay a loan"
   time: "11:22"
-  place: "Colombia, Antioquia, Medellín"
+  location: "Colombia, Antioquia, Medellín"
   Expenses:Gifts:LuisaFernandaLozanoEljach          16000 COP
     beneficiary: "Luisa Fernanda Lozano Eljach"
   Assets:Bank:Nequi
 
 2026-07-24 * "Tienda El Chocho" "Avocado for lunch"
   time: "12:46"
-  place: "Colombia, Antioquia, Envigado"
+  location: "Colombia, Antioquia, Envigado"
   Expenses:Food:Essential                           10500 COP
   Assets:Bank:Nequi
 
 2026-07-24 * "Luisa Fernanda Lozano Eljach" "THC vape for Luisa"
   time: "17:11"
-  place: "Colombia, Antioquia, Medellín"
+  location: "Colombia, Antioquia, Medellín"
   Expenses:Gifts:LuisaFernandaLozanoEljach          45000 COP
     beneficiary: "Luisa Fernanda Lozano Eljach"
   Assets:Bank:Nequi
 
 2026-07-24 * "Empresas Públicas de Medellín (EPM)" "Contract number: 708450. Water supply, sewer, electricity, and gas"
   time: "21:43"
-  place: "Colombia, Antioquia, Medellín"
+  location: "Colombia, Antioquia, Medellín"
   note: "Paying the utility bills for the house in Bello: my mum, Rocío, asked me to pay the bills and gave me the money to do so"
   Liabilities:Payables:RocíoVanegasMisas            590903.86 COP
     property: "Carrera 54a Calle 47-16 - Bello"
@@ -249,7 +268,7 @@
 
 2026-07-25 * "Luisa Fernanda Lozano Eljach" "THC vape for Luisa"
   time: "11:46"
-  place: "Colombia, Antioquia, Medellín"
+  location: "Colombia, Antioquia, Medellín"
   Expenses:Gifts:LuisaFernandaLozanoEljach          30000 COP
     beneficiary: "Luisa Fernanda Lozano Eljach"
   Expenses:Taxes                                    120 COP
@@ -257,14 +276,14 @@
 
 2026-07-26 * "Felipe Arbeláez Rodríguez" "My mom, Rocío, told me to give them to Felipe"
   time: "12:01"
-  place: "Colombia, Antioquia, Medellín"
+  location: "Colombia, Antioquia, Medellín"
   Liabilities:Payables:RocíoVanegasMisas            60240 COP
     beneficiary: "Felipe Arbeláez Rodríguez"
   Assets:Bank:Nequi
 
 2026-07-26 * "Uber" "Shuttle from Tierra Grata Cumbres to Unidad Jardines"
   time: "12:18"
-  place: "Colombia, Antioquia, Medellín"
+  location: "Colombia, Antioquia, Medellín"
   Expenses:Transport:Essential                      17400 COP
     transport_mode: "Car"
   Expenses:Taxes                                    69.60 COP
@@ -272,7 +291,7 @@
 
 2026-07-26 * "Señor Chino" "Lunch for 4"
   time: "12:18"
-  place: "Colombia, Antioquia, Medellín"
+  location: "Colombia, Antioquia, Medellín"
   Expenses:Food:Delivery                            12025 COP
     beneficiary: "Luisa Fernanda Lozano Eljach"
   Expenses:Food:Delivery                            12025 COP
@@ -283,21 +302,14 @@
   Expenses:Taxes                                    192.40 COP
   Assets:Bank:Nequi
 
-2026-07-26 * "Señor Chino" "Lunch for 4"
-  time: "12:18"
-  place: "Colombia, Antioquia, Medellín"
-  Expenses:Transport:Essential                      48100 COP
-  Expenses:Taxes                                    192.40 COP
-  Assets:Bank:Nequi
-
-2026-07-27 * "Transfer" "Transfer between own accounts (Bancolombia to Nu)"
+2026-07-27 * "Transfer" "Transfer between own accounts"
   time: "18:07"
-  place: "Colombia, Antioquia, Medellín"
+  location: "Colombia, Antioquia, Medellín"
   note: "Transferring money from Bancolombia to Nu. This is my first deposit in the account"
   Assets:Bank:Nu                                    100000 COP
   Assets:Bank:Bancolombia
 
-2026-08-01 * "Unknown" "Transaction not recognised. I don’t remember it"
+2026-07-27 * "Unknown" "Transaction not recognised. I don’t remember it"
   note: "I found this deduction on my bank statement but I do not remember what it was"
   Expenses:Unknown                                  17500 COP
   Assets:Bank:Bancolombia
@@ -308,20 +320,20 @@
 
 2026-07-27 * "Luisa Fernanda Lozano Eljach" "THC vape for Luisa"
   time: "19:50"
-  place: "Colombia, Antioquia, Medellín"
-  Expenses:Gifts:LuisaFernandaLozanoEljach          45000 COP
+  location: "Colombia, Antioquia, Medellín"
+  Expenses:Gifts:LuisaFernandaLozanoEljach          35000 COP
     beneficiary: "Luisa Fernanda Lozano Eljach"
   Assets:Bank:Bancolombia
 
 2026-07-28 * "Los Cuñados" "Home delivery of groceries from the shop"
   time: "10:48"
-  place: "Colombia, Antioquia, Medellín"
+  location: "Colombia, Antioquia, Medellín"
   Expenses:Food:Essential                           14000 COP
   Assets:Bank:Bancolombia
 
 2026-07-28 * "Felipe Arbeláez Rodríguez" "Groceries from D1 and Los Cuñados, plus gift"
   time: "13:00"
-  place: "Colombia, Antioquia, Medellín"
+  location: "Colombia, Antioquia, Medellín"
   note: "D1 receipt: 19,900 COP. Los Cuñados receipt: 46,584 COP. The remaining change of 13,516 COP was left as a gift for Felipe"
   Expenses:Food:Essential                           62434 COP
   Expenses:Shopping:Essential                       4050 COP
@@ -331,7 +343,7 @@
 
 2026-07-28 * "Unknown" "Lunch: Two soups"
   time: "12:27"
-  place: "Colombia, Antioquia, Medellín"
+  location: "Colombia, Antioquia, Medellín"
   note: "Two soups, one for me and one for Luisa. Exact restaurant name forgotten"
   Expenses:Food:Delivery                            7750 COP
     beneficiary: "Luisa Fernanda Lozano Eljach"
@@ -340,27 +352,35 @@
 
 2026-07-28 * "Brasas La 80 / Unknown" "Dinner delivery for two"
   time: "20:52"
-  place: "Colombia, Antioquia, Medellín"
+  location: "Colombia, Antioquia, Medellín"
   note: "I transferred 50000 COP to Luisa to pay for dinner. 25000 COP for chicken from Brasas La 80 for me, 25000 COP for hot dogs for Luisa from an unknown place"
   Expenses:Food:Delivery                            25000 COP
     beneficiary: "Luisa Fernanda Lozano Eljach"
   Expenses:Food:Delivery                            25000 COP
   Assets:Bank:Bancolombia
 
+2026-07-28 * "Bancolombia" "Bank interest"
+  Assets:Bank:Bancolombia                              1.86 COP
+  Income:Interest
+
 2026-07-29 * "Los Cuñados" "Groceries for dinner"
   time: "20:01"
-  place: "Colombia, Antioquia, Medellín"
+  location: "Colombia, Antioquia, Medellín"
   Expenses:Food:Essential                           10600 COP
   Assets:Bank:Bancolombia
 
+2026-07-29 * "Bancolombia" "Bank interest"
+  Assets:Bank:Bancolombia                              1.64 COP
+  Income:Interest
+
 2026-07-30 * "Luisa Fernanda Lozano Eljach" "Financial help to pay a loan"
   time: "07:10"
-  place: "Colombia, Antioquia, Medellín"
+  location: "Colombia, Antioquia, Medellín"
   Expenses:Gifts:LuisaFernandaLozanoEljach          29000 COP
     beneficiary: "Luisa Fernanda Lozano Eljach"
   Assets:Bank:Bancolombia
 
-2026-07-30 * "Luisa Fernanda Lozano Eljach" "Transport allowance for master degree at EAFIT"
+2026-07-30 * "Luisa Fernanda Lozano Eljach" "Financial help"
   time: "07:11"
   place: "Colombia, Antioquia, Medellín"
   Expenses:Gifts:LuisaFernandaLozanoEljach          30000 COP
@@ -369,19 +389,49 @@
 
 2026-07-30 * "Luisa Fernanda Lozano Eljach" "Shuttle from Unidad Jardines to Tierra Grata Cumbres"
   time: "08:45"
-  place: "Colombia, Antioquia, Medellín"
-  Expenses:Transport:Essential                      15000 COP
+  location: "Colombia, Antioquia, Medellín"
+  Expenses:Gifts:LuisaFernandaLozanoEljach          15000 COP
+    beneficiary: "Luisa Fernanda Lozano Eljach"
     transport_mode: "Motorbike"
   Assets:Bank:Bancolombia
 
-2026-07-30 * "Transfer" "Transfer between own accounts (Bancolombia to Nu)"
+2026-07-30 * "Transfer" "Transfer between own accounts"
   time: "20:41"
-  place: "Colombia, Antioquia, Medellín"
+  location: "Colombia, Antioquia, Medellín"
   Assets:Bank:Nu                                    200000 COP
   Assets:Bank:Bancolombia
 
+2026-07-30 * "Bancolombia" "Bank interest"
+  Assets:Bank:Bancolombia                              1.62 COP
+  Income:Interest
+
 2026-07-31 * "Supermercado y Autoservicio La 84" "Grocery delivery"
   time: "12:11"
-  place: "Colombia, Antioquia, Medellín"
+  location: "Colombia, Antioquia, Medellín"
   Expenses:Food:Essential                           22000 COP
+  Assets:Bank:Bancolombia
+
+2026-07-31 * "Luisa Fernanda Lozano Eljach" "Transport allowance for master degree at EAFIT"
+  time: "17:31"
+  place: "Colombia, Antioquia, Medellín"
+  Expenses:Gifts:LuisaFernandaLozanoEljach          30000 COP
+    beneficiary: "Luisa Fernanda Lozano Eljach"
+  Assets:Bank:Bancolombia
+
+2026-07-31 * "Bancolombia" "Bank interest"
+  Assets:Bank:Bancolombia                              3.49 COP
+  Income:Interest
+
+2026-07-31 * "Bancolombia" "Bank interest"
+  Assets:Bank:Bancolombia                              1.25 COP
+  Income:Interest
+
+2026-07-31 * "RAM BPO SAS" "Payroll"
+  location: "Colombia, Antioquia, Medellín"
+  Assets:Bank:Bancolombia                           1691874 COP
+  Income:Salary
+
+2026-08-01 * "Tigo" "Internet, TV, and cell phone plan"
+  Expenses:Housing:Internet                          160047 COP
+    property: "Calle 44c # 91-54 - Unidad Jardines - Apartamento 1501"
   Assets:Bank:Bancolombia
