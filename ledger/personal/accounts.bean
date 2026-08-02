@@ -1,34 +1,22 @@
 ; ============================================================
 ; accounts.bean — Chart of accounts
 ;
-; 1. Purpose: This file defines the chart of accounts for the ledger.
-; 2. Usage notes:
-;       - It is included in main.bean and should not be included
-;       directly in any other file.
-;       - To close an account, add a new line with the date
-;       and the "close" directive.
-; 3. Naming rules:
-;       - Disambiguation rule: Only use a budget category suffix in 
-;       the account name to disambiguate a broad category that is split 
-;       (e.g., Expenses:Food:Essential and Expenses:Food:Nonessential).
-;       - Absolute categories: If an account strictly belongs  
-;       to one budget category, omit the suffix from the name 
-;       (e.g., Expenses:Health, Expenses:Entertainment).
-;       - Specificity: Asset and liability accounts must explicitly 
-;       state the institution name.
-; 4. Metadata rules:
-;       - Every expense account must have a budget_category metadata tag.
-;       - Tags must be strictly lowercase: "future", "essential", 
-;       or "nonessential".
+; This file defines the chart of accounts for the ledger. It is
+; included in main.bean and should not be included directly in
+; any other file. To close an account, add a new line with the
+; date and the "close" directive.
+;
+; All naming, metadata, ordering, and formatting rules for this
+; file live in rules.md, sections 2 and 4. Keep this file free of
+; rule text so a change only ever needs to happen in one place.
 ; ============================================================
 
-; ------------------------------------------------------------
+; ============================================================
 ; ASSETS — Things I own
-; ------------------------------------------------------------
+; ============================================================
 
 ; --- Cash ---
 2001-03-20 open Assets:Cash:Wallet
-2001-03-20 open Assets:Cash:EmergencyFund
 
 ; --- Bank accounts ---
 ; To receive salary and save money
@@ -38,38 +26,38 @@
 ; To invest and shop online
 2026-06-26 open Assets:Bank:Nu
 
-; --- Savings ---
-2001-03-20 open Assets:Savings:EmergencyFund
-
 ; --- Receivables ---
 2001-03-20 open Assets:Receivables:RocíoVanegasMisas
+2001-03-20 open Assets:Receivables:LunaMarysolRodríguezVanegas
+2001-03-20 open Assets:Receivables:FelipeArbeláezRodríguez
 2001-03-20 open Assets:Receivables:LuisaFernandaLozanoEljach
 
 
-; ------------------------------------------------------------
+; ============================================================
 ; LIABILITIES — Things I owe
-; ------------------------------------------------------------
+; ============================================================
+
 ; --- Credit cards ---
 ; It's currently empty, here's an example: 2001-03-20 open Liabilities:CreditCard:Bancolombia
 
 ; --- Payables ---
-2001-03-20 open Liabilities:Payables:LuisaFernandaLozanoEljach
 2001-03-20 open Liabilities:Payables:RocíoVanegasMisas
+2001-03-20 open Liabilities:Payables:LunaMarysolRodríguezVanegas
 2001-03-20 open Liabilities:Payables:FelipeArbeláezRodríguez
+2001-03-20 open Liabilities:Payables:LuisaFernandaLozanoEljach
 
-; ------------------------------------------------------------
+
+; ============================================================
 ; INCOME — Money coming in
-; ------------------------------------------------------------
+; ============================================================
 2001-03-20 open Income:Salary
-2001-03-20 open Income:Business
 2001-03-20 open Income:Interest
 
 ; --- Gifts ---
-2001-03-20 open Income:Gifts:LuisaFernandaLoza☻noEljach
 2001-03-20 open Income:Gifts:RocíoVanegasMisas
-2001-03-20 open Income:Gifts:FelipeArbeláezRodríguez
 
-; ------------------------------------------------------------
+
+; ============================================================
 ; EXPENSES — Money going out
 ;
 ; - This section is divided into three budget_category blocks,
@@ -80,7 +68,7 @@
 ; - Within ESSENTIAL and NONESSENTIAL, accounts are grouped by
 ;   topic in this order: Food, Transport, Housing, Shopping,
 ;   then everything else.
-; ------------------------------------------------------------
+; ============================================================
 
 ; ============================================================
 ; FUTURE
@@ -109,21 +97,16 @@
   budget_category: "essential"
 2001-03-20 open Expenses:Housing:Internet
   budget_category: "essential"
-; To buy necessary household items I need to look after my home
-2001-03-20 open Expenses:Housing:Shopping:Essential
-  budget_category: "essential"
 
 ; --- Shopping ---
 ; To cover the shopping I need to survive. Example: Personal hygiene items I need for my own care
 2001-03-20 open Expenses:Shopping:Essential
   budget_category: "essential"
-2001-03-20 open Expenses:Shopping:Clothing:Essential
-  budget_category: "essential"
 
 ; --- Other ---
 2001-03-20 open Expenses:Health
   budget_category: "essential"
-2026-07-26 open Expenses:Taxes
+2001-03-20 open Expenses:Taxes
   budget_category: "essential"
 
 
@@ -144,25 +127,10 @@
 2001-03-20 open Expenses:Transport:Nonessential
   budget_category: "nonessential"
 
-; --- Housing ---
-; To buy decorative or nonessential household goods
-2001-03-20 open Expenses:Housing:Shopping:Nonessential
-  budget_category: "nonessential"
-
-; --- Shopping ---
-; To buy discretionary purchases I could live without
-2001-03-20 open Expenses:Shopping:Nonessential
-  budget_category: "nonessential"
-2001-03-20 open Expenses:Shopping:Clothing:Nonessential
-  budget_category: "nonessential"
-
 ; --- Other ---
 2001-03-20 open Expenses:Gifts
   budget_category: "nonessential"
-2001-03-20 open Expenses:Entertainment
-  budget_category: "nonessential"
-2001-03-20 open Expenses:Subscriptions
-  budget_category: "nonessential"
+
 
 ; ============================================================
 ; UNKNOWN
